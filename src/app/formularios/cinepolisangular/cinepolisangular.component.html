@@ -1,0 +1,32 @@
+<div>
+  <h1>Cine Angular</h1>
+  <form [formGroup]="formulario">
+    <div>
+      <label for="nombre">Nombre</label>
+      <input formControlName="nombre" type="text">
+    </div>
+
+    <div>
+      <label for="cantCompradores">Cantidad de compradores</label>
+      <input formControlName="cantCompradores" type="number">
+    </div>
+
+    <div>
+      <label>
+        <input type="radio" formControlName="tarjeta" value="1"> Si tengo tarjeta
+      </label>
+      <label>
+        <input type="radio" formControlName="tarjeta" value="2"> No tengo tarjeta
+      </label>
+    </div>
+
+    <div>
+      <label for="cantBoletos">Cantidad de boletos</label>
+      <input formControlName="cantBoletos" type="number">
+    </div>
+
+    <button (click)="realizarCompra()" type="button">Realizar Compra</button>
+
+    <p>{{mensajeFinal}}</p>
+  </form>
+</div>
